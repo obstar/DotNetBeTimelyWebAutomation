@@ -31,7 +31,7 @@ namespace DotNetBeTimelyWebAutomation.Tests.PageActions
 
         public void AssertPageLoaded()
         {
-            Assert.AreEqual("Register your Timely account - Timely", _browser.Title);
+            Assert.AreEqual(SignUpPage.Title, _browser.Title);
             Assert.IsTrue(_browser.FindLink(SignUpPage.LinkTextLogIn)
                                   .Exists());
             Assert.IsTrue(_browser.FindButton(SignUpPage.ButtonTextSignUpWithGoogle)
