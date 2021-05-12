@@ -32,7 +32,6 @@ namespace DotNetBeTimelyWebAutomation.Tests.PageSteps
         public void WhenIClickStartFreeDayTrialButtonOnSignUpPage()
         {
             _signUpPageActions.ClickButtonStartFreeDayTrial();
-            Thread.Sleep(5000);
         }
 
         [Then(@"user can see Sign Up page")]

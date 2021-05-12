@@ -31,7 +31,6 @@ namespace DotNetBeTimelyWebAutomation.Tests.PageActions
 
         public void AssertPageLoaded()
         {
-            Assert.AreEqual(SignUpPage.Title, _browser.Title);
             Assert.IsTrue(_browser.FindLink(SignUpPage.LinkTextLogIn)
                                   .Exists());
             Assert.IsTrue(_browser.FindButton(SignUpPage.ButtonTextSignUpWithGoogle)
@@ -48,12 +47,15 @@ namespace DotNetBeTimelyWebAutomation.Tests.PageActions
                                   .Exists());
             Assert.IsTrue(_browser.FindLink(SignUpPage.LinkTextTermsOfService)
                                   .Exists());
+            Assert.AreEqual(SignUpPage.Title, _browser.Title);
         }
 
         public void ClickButtonStartFreeDayTrial()
         {
             _browser.FindCss(SignUpPage.ButtonCssStartFreeDayTrial)
                     .Click();
+            _browser.FindCss(SignUpPage.ButtonCssStartFreeDayTrial)
+                    .Missing();
         }
 
         public void FillInSignUpForm()
