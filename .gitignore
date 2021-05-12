@@ -111,6 +111,9 @@ _TeamCity*
 # DotCover is a Code Coverage Tool
 *.dotCover
 
+# SpecFlow code feature files
+*.feature.cs
+
 # NCrunch
 _NCrunch_*
 .*crunch*.local.xml
