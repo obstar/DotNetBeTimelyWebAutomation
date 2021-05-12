@@ -1,4 +1,5 @@
-﻿using TechTalk.SpecFlow;
+﻿using DotNetBeTimelyWebAutomation.Tests.PageActions;
+using TechTalk.SpecFlow;
 
 namespace DotNetBeTimelyWebAutomation.Tests.PageSteps
 {
@@ -7,7 +8,7 @@ namespace DotNetBeTimelyWebAutomation.Tests.PageSteps
     [Scope(Tag = "Register")]
     public class SignUpPageSteps
     {
-        private SignUpPageActions _signUpPageActions;
+        private readonly SignUpPageActions _signUpPageActions;
 
         public SignUpPageSteps(SignUpPageActions signUpPageActions)
         {
@@ -17,13 +18,13 @@ namespace DotNetBeTimelyWebAutomation.Tests.PageSteps
         [Given(@"I go to staging timely Sign up page")]
         public void GivenIGoToStagingTimelySignUpPage()
         {
-            ScenarioContext.Current.Pending();
+            _signUpPageActions.NavigateToPage();
         }
 
         [Then(@"user can see Sign Up page")]
         public void ThenUserCanSeeSignUpPage()
         {
-            ScenarioContext.Current.Pending();
+            _signUpPageActions.AssertPageLoaded();
         }
     }
 }
