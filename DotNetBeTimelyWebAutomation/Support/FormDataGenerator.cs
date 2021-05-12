@@ -6,7 +6,7 @@ namespace DotNetBeTimelyWebAutomation.Tests.Support
 {
     public class FormDataGenerator
     {
-        private static readonly Random Rnd = new Random();
+        private static readonly Random Rnd = new();
 
         public string SomeNewGuid()
         {
@@ -108,12 +108,13 @@ namespace DotNetBeTimelyWebAutomation.Tests.Support
             var divisor = 1;
             for (var i = 0; i < decimals; i++) divisor = divisor * 10;
 
-            var decimalPart = (decimal)SomeNumber(0, divisor - 1) / divisor;
-            var value = (SomeNumber(minNumber, maxNumber) + decimalPart);
+            var decimalPart = (decimal) SomeNumber(0, divisor - 1) / divisor;
+            var value = SomeNumber(minNumber, maxNumber) + decimalPart;
             return decimal.Round(value, decimals, MidpointRounding.AwayFromZero);
         }
 
-        public decimal SomePercent(int min = 0, int max = 100)
+        public decimal SomePercent(int min = 0,
+                                   int max = 100)
         {
             var ret = Rnd.Next(0, 100 * max);
             return ret / 100m;
