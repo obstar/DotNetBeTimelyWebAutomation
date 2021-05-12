@@ -93,7 +93,7 @@ namespace DotNetBeTimelyWebAutomation.Tests.Config
         {
             var htmlReporter = new ExtentHtmlReporter(AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug\\net5.0", "\\Report"));
             htmlReporter.Config.Theme = Theme.Standard;
-            htmlReporter.Config.ReportName = "DotNet Giphy Web Automation tests report";
+            htmlReporter.Config.ReportName = "DotNet Timely Web Automation tests report";
             _extent = new ExtentReports();
             _extent.AttachReporter(htmlReporter);
         }
