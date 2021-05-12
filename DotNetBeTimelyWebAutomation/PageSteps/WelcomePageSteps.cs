@@ -1,4 +1,5 @@
-﻿using TechTalk.SpecFlow;
+﻿using DotNetBeTimelyWebAutomation.Tests.PageActions;
+using TechTalk.SpecFlow;
 
 namespace DotNetBeTimelyWebAutomation.Tests.PageSteps
 {
