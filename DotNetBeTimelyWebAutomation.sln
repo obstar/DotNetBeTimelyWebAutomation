@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetBeTimelyWebAutomation", "DotNetBeTimelyWebAutomation\DotNetBeTimelyWebAutomation.csproj", "{3F1E5F74-2244-4C43-8B6E-C857C07C8614}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetBeTimelyWebAutomation.Tests", "DotNetBeTimelyWebAutomation\DotNetBeTimelyWebAutomation.Tests.csproj", "{3F1E5F74-2244-4C43-8B6E-C857C07C8614}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
