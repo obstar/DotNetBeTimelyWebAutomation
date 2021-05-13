@@ -1,11 +1,11 @@
-﻿using System.Threading;
-using DotNetBeTimelyWebAutomation.Tests.PageActions;
+﻿using DotNetBeTimelyWebAutomation.Tests.PageActions;
 using TechTalk.SpecFlow;
 
 namespace DotNetBeTimelyWebAutomation.Tests.PageSteps
 {
     [Binding]
     [Scope(Feature = "SignUp")]
+    [Scope(Feature = "SignUpLinks")]
     [Scope(Tag = "Register")]
     public class SignUpPageSteps
     {
@@ -32,6 +32,12 @@ namespace DotNetBeTimelyWebAutomation.Tests.PageSteps
         public void WhenIClickStartFreeDayTrialButtonOnSignUpPage()
         {
             _signUpPageActions.ClickButtonStartFreeDayTrial();
+        }
+
+        [When(@"I click Log In link on Sign Up page")]
+        public void WhenIClickLogInLinkOnSignUpPage()
+        {
+            _signUpPageActions.ClickLinkLogIn();
         }
 
         [Then(@"user can see Sign Up page")]
