@@ -5,11 +5,11 @@ namespace DotNetBeTimelyWebAutomation.Tests.PageSteps
 {
     [Binding]
     [Scope(Feature = "SignUp")]
-    public class WelcomePageSteps
+    public class WelcomeSteps
     {
         private readonly WelcomePageActions _welcomePageStepsPageActions;
 
-        public WelcomePageSteps(WelcomePageActions welcomePageStepsPageActions)
+        public WelcomeSteps(WelcomePageActions welcomePageStepsPageActions)
         {
             _welcomePageStepsPageActions = welcomePageStepsPageActions;
         }

@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using DotNetBeTimelyWebAutomation.Tests.PageActions;
+﻿using DotNetBeTimelyWebAutomation.Tests.PageActions;
 using TechTalk.SpecFlow;
 
 namespace DotNetBeTimelyWebAutomation.Tests.PageSteps
@@ -7,11 +6,11 @@ namespace DotNetBeTimelyWebAutomation.Tests.PageSteps
     [Binding]
     [Scope(Feature = "SignUp")]
     [Scope(Tag = "Register")]
-    public class SignUpPageSteps
+    public class SignUpSteps
     {
         private readonly SignUpPageActions _signUpPageActions;
 
-        public SignUpPageSteps(SignUpPageActions signUpPageActions)
+        public SignUpSteps(SignUpPageActions signUpPageActions)
         {
             _signUpPageActions = signUpPageActions;
         }
