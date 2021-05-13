@@ -40,6 +40,12 @@ namespace DotNetBeTimelyWebAutomation.Tests.PageSteps
             _signUpPageActions.ClickLinkLogIn();
         }
 
+        [When(@"I click Terms of Service link on Sign Up page")]
+        public void WhenIClickTermsOfServiceLinkOnSignUpPage()
+        {
+            _signUpPageActions.ClickLinkTermsOfService();
+        }
+
         [Then(@"user can see Sign Up page")]
         public void ThenUserCanSeeSignUpPage()
         {
