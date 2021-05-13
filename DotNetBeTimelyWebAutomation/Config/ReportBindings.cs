@@ -23,6 +23,16 @@ namespace DotNetBeTimelyWebAutomation.Tests.Config
             _scenarioContext = scenarioContext;
         }
 
+        [BeforeTestRun]
+        public static void BeforeTestRun()
+        {
+            var htmlReporter = new ExtentHtmlReporter(AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug\\net5.0", "\\Report"));
+            htmlReporter.Config.Theme = Theme.Standard;
+            htmlReporter.Config.ReportName = "DotNet Timely Web Automation tests report";
+            _extent = new ExtentReports();
+            _extent.AttachReporter(htmlReporter);
+        }
+
         [BeforeFeature]
         public static void BeforeFeature(FeatureContext featureContext)
         {
@@ -86,16 +96,6 @@ namespace DotNetBeTimelyWebAutomation.Tests.Config
         public static void AfterTestRun()
         {
             _extent.Flush();
-        }
-
-        [BeforeTestRun]
-        private static void BeforeTestRun()
-        {
-            var htmlReporter = new ExtentHtmlReporter(AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug\\net5.0", "\\Report"));
-            htmlReporter.Config.Theme = Theme.Standard;
-            htmlReporter.Config.ReportName = "DotNet Timely Web Automation tests report";
-            _extent = new ExtentReports();
-            _extent.AttachReporter(htmlReporter);
         }
     }
 }
