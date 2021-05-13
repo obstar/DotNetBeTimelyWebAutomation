@@ -63,6 +63,11 @@ namespace DotNetBeTimelyWebAutomation.Tests.PageActions
             _browser.ClickLink(SignUpPage.LinkTextLogIn);
         }
 
+        public void ClickLinkTermsOfService()
+        {
+            _browser.ClickLink(SignUpPage.LinkTextTermsOfService);
+        }
+
         public void FillInSignUpForm()
         {
             FillInWorkEmail($"jakub{_formDataGenerator.AnAlphaNumericCode(5)}@memorytest.ai");
